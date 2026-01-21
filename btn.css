@@ -1,0 +1,10 @@
+.btn{
+    background-color: bisque;
+    color: blueviolet;
+    width: 100px;
+    height: 100px;
+}
+
+.btn:hover{
+    background-color: chartreuse;
+}
