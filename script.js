@@ -47,3 +47,15 @@
 // btn.removeEventListener("click",message)
 
 
+// AGLA LECTURE
+
+console.log(b)
+let a=134
+var b=1384
+console.log(a)
+console.log(b)
+
+function print(){
+    console.log ("inside fn")
+}
+print()
