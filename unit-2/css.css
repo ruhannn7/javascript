@@ -1,0 +1,17 @@
+.btn{
+    background-color: brown;
+    border-radius: 2px;
+    border: 2;
+    width: 60px;
+    height: 50px;
+}
+
+li{
+    background-color:antiquewhite;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list{
+    width: 500px;
+}
