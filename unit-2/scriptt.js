@@ -28,19 +28,37 @@
 //     num+=1
 // },1000) 
 
-const name=document.querySelector("#name")
-const btn=document.querySelector(".btn")
-const list=document.querySelector(".list")
-btn.addEventListener('click',()=>{
-    const li=document.createElement('li')
-    const dlt=document.createElement('button')
-    dlt.innerText="Delete"
-    li.innerText=name.value;
-    list.appendChild(li)
-    dlt.addEventListener("click",()=>{
-        list.removeChild(li)
-    })
-    li.appendChild(dlt)
-    list.appendChild(li)
-    name.value=""
-})
+// LECTURE 3
+// const name=document.querySelector("#name")
+// const btn=document.querySelector(".btn")
+// const list=document.querySelector(".list")
+// btn.addEventListener('click',()=>{
+//     const li=document.createElement('li')
+//     const dlt=document.createElement('button')
+//     dlt.innerText="Delete"
+//     li.innerText=name.value;
+//     list.appendChild(li)
+//     dlt.addEventListener("click",()=>{
+//         list.removeChild(li)
+//     })
+//     li.appendChild(dlt)
+//     list.appendChild(li)
+//     name.value=""
+// })
+
+
+//LECTURE 4
+console.log ("starting homework...");
+setTimeout(()=>{
+    console.log("homework done!");
+    console.log("starting dinnner ...");
+    setTimeout(()=>{
+        console.log("dinner done!");
+        console.log("getting ready to go out ...");
+        setTimeout(()=>{
+            console.log("going to playground!");
+        },1000);
+
+    },1500)
+},
+2000)
