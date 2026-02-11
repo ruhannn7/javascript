@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #8fb3ff, #9ad9d1);
+  padding: 20px;
+}
+
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+h1 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.main-content {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.eventForm,
+.events,
+.dom {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.eventForm h2,
+.events h2,
+.dom h2 {
+  color: #5d5fef;
+  margin-bottom: 15px;
+}
+
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  margin: 6px 0 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  resize: none;
+  height: 70px;
+}
+
+
+button {
+  background: linear-gradient(90deg, #6a6be9, #7a52aa);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+
+.eventForm button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.events button {
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+
+.events p {
+  color: #9aa;
+  margin-top: 25px;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.card {
+  background: #f7f7ff;
+  width: 180px;
+  padding: 12px;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.card p {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.card button {
+  background: #5d5fef;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+
+.deleteCard {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: red;
+  color: white;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.dom {
+  grid-column: 1 / -1;     
+  background: white;
+  border-radius: 14px;
+  padding: 20px 26px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+
+  display: flex;
+  flex-direction: column; 
+  gap: 12px;
+}
+
+
+.dom h2 {
+  color: #5d5fef;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+.dom-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: #333;
+}
+
+
+.dom .key {
+  background: #f6f7fb;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5d5fef;
+}
+
+
+.eventForm h2,
+.events h2,
+.dom h2 {
+  color: #5d5fef;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
