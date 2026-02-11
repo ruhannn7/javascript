@@ -47,18 +47,121 @@
 // })
 
 
-//LECTURE 4
-console.log ("starting homework...");
-setTimeout(()=>{
-    console.log("homework done!");
-    console.log("starting dinnner ...");
-    setTimeout(()=>{
-        console.log("dinner done!");
-        console.log("getting ready to go out ...");
-        setTimeout(()=>{
-            console.log("going to playground!");
-        },1000);
+// LECTURE 4
+// console.log ("starting homework...");
 
-    },1500)
-},
-2000)
+// setTimeout(()=>{
+//     console.log("homework done!");
+//     console.log("starting dinnner ...");
+    
+//     setTimeout(()=>{
+//         console.log("dinner done!");
+//         console.log("getting ready to go out ...");
+    
+//         setTimeout(()=>{
+//             console.log("going to playground!");
+//         },1000);
+  
+//     },1500)
+
+// },2000)
+
+//LECTURE 5
+// function FinishHomework(callback){
+//     console.log("Starting homework....");
+//     setTimeout(() =>{
+//         console.log("Homework Done!");
+//         callback();
+
+//     },2000);
+// }
+
+// function eatDinner(callback) {
+//   console.log("Starting dinner...");
+//   setTimeout(() => {
+//     console.log("Dinner done!");
+//     callback();
+//   }, 1500);
+// }
+
+// function goToPlayground() {
+//   console.log("Going to the playground!");
+// }
+
+// finishHomework(() => {
+//   eatDinner(() => {
+//     goToPlayground();
+//   });
+// });
+
+
+//LECTURE 6 
+// const p = new Promise((resolve, reject) => {
+//     let done = true;
+//     setTimeout(() => {
+//         if(done){
+//             resolve({name:"Anand",age:23})
+//         }else{
+//             reject("Word has not been completed")
+//         }
+
+//     },5000)
+// })
+
+// p.then((data) => {
+//     console.log(data.name);
+// })
+// .catch((err) => {
+//     console.log(err);
+// })
+// .finally(() => {
+//     console.log("Finally Block");
+// });
+
+// function doHomework(){
+//     const p=new Promise((res,rej)=>{
+//         let done = true;
+//         setTimeout(()=>{
+//             if(done){
+//                 console.log("Homework completed")
+//                 res
+//             }
+//         })
+//     })
+// }
+
+function OrderFood(){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            console.log("Food Ordered!")
+            resolve()
+        },2000)
+    })
+}
+
+function PrepareFood(){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            console.log("Food Prepared!")
+            resolve()
+        },2000)
+    })
+}
+
+function DeliverFood(){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            console.log("Food Delivered!")
+            resolve()
+        },2000)
+    })
+}
+
+async function FoodDelivery(){
+    const data = await OrderFood()
+    console.log(data)
+    await PrepareFood()
+    await DeliverFood()
+}
+
+FoodDelivery()
