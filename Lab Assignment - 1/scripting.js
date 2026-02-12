@@ -34,10 +34,29 @@ clearBtn.addEventListener('click', function () {
 })
 
 
-sampleBtn.addEventListener('click', function () {
-  createCard(
-    'Web Dev Workshop',
-    '2024-10-15',
-    'Workshop',
-    'Hands-on web development session')
-})
+sampleBtn.addEventListener("click", function() {
+
+    function createSample(title, date, cat, desc) {
+        const card = document.createElement("div");
+        card.classList.add("card");
+
+        card.innerHTML = `
+            <h2>${title}</h2>
+            <p>Date: 📅 ${date}</p>
+            <button class="category">${cat}</button>
+            <p>Description: ${desc}</p>
+            <div class="deleteCard">X</div>
+        `;
+
+        card.querySelector(".deleteCard").addEventListener("click", function() {
+            card.remove();
+        });
+
+        eventCards.appendChild(card);
+    }
+
+    createSample("Tech Conference", "2026-02-10", "Conference", "Annual tech meet.");
+    createSample("Cyber Workshop", "2026-03-05", "Workshop", "Hands-on security training.");
+    createSample("Community Meetup", "2026-04-01", "Meetup", "Networking and discussion.");
+
+});
