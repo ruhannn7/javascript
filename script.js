@@ -49,13 +49,28 @@
 
 // AGLA LECTURE
 
-console.log(b)
-let a=134
-var b=1384
-console.log(a)
-console.log(b)
+// console.log(b)
+// let a=134
+// var b=1384
+// console.log(a)
+// console.log(b)
 
-function print(){
-    console.log ("inside fn")
+// function print(){
+//     console.log ("inside fn")
+// }
+// print()
+
+
+
+//ERROR HANDLING
+console.log("first line")
+try{
+    let age = 16
+    if(age<18){
+        throw new Error("You are a minorrrrrrr")
+    }
+}catch(e){
+    console.error(e)
+    console.log("error aa gaya")
 }
-print()
+console.log("second line")
