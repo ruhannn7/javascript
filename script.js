@@ -63,14 +63,16 @@
 
 
 //ERROR HANDLING
-console.log("first line")
-try{
-    let age = 16
-    if(age<18){
-        throw new Error("You are a minorrrrrrr")
-    }
-}catch(e){
-    console.error(e)
-    console.log("error aa gaya")
-}
-console.log("second line")
+// console.log("first line")
+// try{
+//     let age = 16
+//     if(age<18){
+//         throw new Error("You are a minorrrrrrr")
+//     }
+// }catch(e){
+//     console.error(e)
+//     console.log("error aa gaya")
+// }
+// console.log("second line")
+
+
