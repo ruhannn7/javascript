@@ -1,20 +1,112 @@
-.card{
-    background-color: greenyellow;
-    width: 150px;
-    position: relative;
-}
-.deleteCard{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: red;
+body {
+    background-color: #1a237e; 
     color: white;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+
+h2 {
+    margin: 20px 0;
+}
+
+
+.container-top {
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 12px;
+    gap: 20px;
+    width: 95%;
+    max-width: 1100px;
+    margin-bottom: 20px;
+}
+
+
+.weatherForm, .info {
+    background-color: white;
+    color: #333;
+    padding: 25px;
+    border-radius: 15px; 
+    flex: 1;
+    min-height: 250px;
+}
+
+
+#city {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#search {
+    background-color: #f4511e; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.historyBtn button {
+    background-color: #f4511e;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    margin: 5px;
+    border-radius: 20px;
+}
+
+
+.info p {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding: 8px 0;
+    margin: 0;
+    border-left: 4px solid #f4511e; 
+    padding-left: 10px;
+}
+
+
+.console {
+    background-color: white;
+    color: #333;
+    width: 95%;
+    max-width: 1100px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#console-log {
+    background-color: #0d1117; 
+    color: #4db8ff; 
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    min-height: 120px;
+    overflow-y: auto;
+}
+
+.weather-item {
+    display: flex;
+    justify-content: space-between;
+    border-left: 4px solid #f4511e; /* Orange vertical line */
+    padding: 8px 10px;
+    margin: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.history-pill {
+    background-color: #f4511e;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 10px;
     cursor: pointer;
 }
