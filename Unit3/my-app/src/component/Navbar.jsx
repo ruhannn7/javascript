@@ -1,5 +1,4 @@
 import React from 'react'
-
 function Navbar(props) {
   // props.list="Cricket"
   // console.log(props.list)
