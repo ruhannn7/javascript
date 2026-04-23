@@ -48,8 +48,8 @@
 
 import React from 'react'
 import { useState, useEffect, useRef } from 'react'
-import styles from "./css/Sample.module.css"
-import NavStyle from "./css/NavBar.module.css"
+import styles from "../css/Sample.module.css"
+import NavStyle from "../css/NavBar.module.css"
 // import styled from "styled-components"
 import styled from "@emotion/styled"
 import { css } from '@emotion/react'
