@@ -27,10 +27,10 @@ function AddStudentForm({ onAddStudent }) {
 
   return (
     <div className="form-card">
-      <h2 className="form-title">➕ Add New Student</h2>
+      <p className="form-title">Add new student</p>
       <form onSubmit={handleSubmit} className="add-form">
         <div className="form-group">
-          <label htmlFor="student-name">Student Name</label>
+          <label htmlFor="student-name">Student name</label>
           <input
             id="student-name"
             type="text"
@@ -55,7 +55,7 @@ function AddStudentForm({ onAddStudent }) {
         </div>
         {error && <p className="form-error">{error}</p>}
         <button type="submit" className="submit-btn">
-          Add Student
+          + Add student
         </button>
       </form>
     </div>

@@ -11,26 +11,39 @@ function StudentTable({ students, onScoreChange, onRemoveStudent }) {
   return (
     <div className="table-wrapper">
       <div className="table-stats">
-        <span className="stat pass-stat">✅ Passing: {passing}</span>
-        <span className="stat fail-stat">❌ Failing: {failing}</span>
-        <span className="stat total-stat">👥 Total: {students.length}</span>
-        <span className="stat avg-stat">📊 Avg: {average}</span>
+        <div className="stat">
+          <span className="stat-value pass-val">{passing}</span>
+          <span className="stat-label">Passing</span>
+        </div>
+        <div className="stat">
+          <span className="stat-value fail-val">{failing}</span>
+          <span className="stat-label">Failing</span>
+        </div>
+        <div className="stat">
+          <span className="stat-value">{students.length}</span>
+          <span className="stat-label">Total</span>
+        </div>
+        <div className="stat">
+          <span className="stat-value">{average}</span>
+          <span className="stat-label">Average</span>
+        </div>
       </div>
+
       <table className="student-table">
         <thead>
           <tr>
-            <th>Student Name</th>
+            <th>Student name</th>
             <th>Score</th>
             <th>Status</th>
             <th>Remove</th>
-            <th>Update</th>
+            <th style={{ textAlign: "right" }}>Update</th>
           </tr>
         </thead>
         <tbody>
           {students.length === 0 ? (
             <tr>
               <td colSpan="5" className="empty-msg">
-                No students yet. Add one below!
+                No students yet — add one below
               </td>
             </tr>
           ) : (

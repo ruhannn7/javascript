@@ -5,6 +5,7 @@ import Navbar from './component/Navbar'
 import HomePage from './component/HomePage'
 import Contact from './component/Contact'
 import { Routes, Route } from 'react-router-dom'
+import { UserContext } from './UserContext'
 
 function App() {
   const [menu, setMenu] = useState("Sports")

@@ -3,6 +3,7 @@ import { useState } from "react";
 function StudentRow({ student, onScoreChange, onRemove }) {
   const [inputValue, setInputValue] = useState(String(student.score));
   const isPassing = student.score >= 40;
+  const barWidth = Math.max(0, Math.min(100, student.score));
 
   const handleChange = (e) => {
     setInputValue(e.target.value);
@@ -18,17 +19,28 @@ function StudentRow({ student, onScoreChange, onRemove }) {
   };
 
   return (
-    <tr className={`student-row ${isPassing ? "pass" : "fail"}`}>
+    <tr className="student-row">
       <td className="td-name">{student.name}</td>
-      <td className="td-score-display">{student.score}</td>
-      <td className="td-status">
+      <td>
+        <div className="score-bar-cell">
+          <span className="td-score-display">{student.score}</span>
+          <div className="score-bar">
+            <div
+              className={`score-bar-fill ${isPassing ? "pass" : "fail"}`}
+              style={{ width: `${barWidth}%` }}
+            />
+          </div>
+        </div>
+      </td>
+      <td>
         <span className={`badge ${isPassing ? "badge-pass" : "badge-fail"}`}>
-          {isPassing ? "✅Pass" : "❌Fail"}
+          <span className="badge-dot" />
+          {isPassing ? "Pass" : "Fail"}
         </span>
       </td>
       <td>
         <button className="remove-btn" onClick={() => onRemove(student.id)}>
-          🗑 Remove
+          Remove
         </button>
       </td>
       <td className="td-update">
